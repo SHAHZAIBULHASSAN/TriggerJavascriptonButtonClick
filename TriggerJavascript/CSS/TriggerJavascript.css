@@ -1,0 +1,54 @@
+/* General Reset */
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    display: inline-flex; /* Ensures proper alignment of icon and text */
+    align-items: center; /* Vertically centers the icon and text */
+    justify-content: center; /* Horizontally centers content */
+    gap: 8px; /* Adds spacing between the icon and text */
+    background-color: #0078d4; /* Default Power Apps blue color */
+    color: white; /* White text for contrast */
+    padding: 8px 16px; /* Padding for button size */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+button:hover {
+    background-color: #005a9e; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+button:active {
+    background-color: #004578; /* Even darker shade when clicked */
+    transform: scale(0.95); /* Slightly shrinks the button */
+}
+
+/* Icon Styling */
+button img {
+    width: 16px; /* Fixed width for the icon */
+    height: 16px; /* Fixed height for the icon */
+    object-fit: contain; /* Ensures the icon scales properly */
+}
+
+/* Disabled State */
+button:disabled {
+    background-color: #cccccc; /* Grayed-out background */
+    color: #666666; /* Grayed-out text */
+    cursor: not-allowed; /* Changes cursor to indicate disabled state */
+}
+
+/* Error State (Optional) */
+button.error {
+    background-color: #e81123; /* Red background for error state */
+    color: white; /* White text for contrast */
+}
+
+/* Focus State (Accessibility) */
+button:focus {
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.5); /* Blue outline for focus */
+}
